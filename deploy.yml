@@ -1,6 +1,6 @@
 
 ---
-- hosts: dev
+- hosts: testing
   tasks:
    - name: Download Java
      command: sudo yum install java-1.8.0-openjdk -y

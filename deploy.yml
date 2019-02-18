@@ -26,12 +26,12 @@
      unarchive: src=/home/ec2-user/tomcat/apache-tomcat-8.0.27.tar.gz dest=/home/ec2-user/tomcat remote_src=yes
   
    - name: Download Application
-     get_url: url=https://s3-us-west-2.amazonaws.com/sujith918/petclinic.war dest=/home/ec2-user/
+     get_url: url=https://s3.amazonaws.com/vetinary-care-solutions/CloudAssessment.war dest=/home/ec2-user/
    - name: start apache-tomcat-8.0.27
      command: /home/ec2-user/tomcat/apache-tomcat-8.0.27/bin/startup.sh
 
    - name: copy petclinic.war
-     shell: cp /home/ec2-user/petclinic.war /home/ec2-user/tomcat/apache-tomcat-8.0.27/webapps/
+     shell: cp /home/ec2-user/CloudAssessment.war /home/ec2-user/tomcat/apache-tomcat-8.0.27/webapps/
 
    - name: stop apache-tomcat-8.0.27
      command: nohup "//home/ec2-user/tomcat/apache-tomcat-8.0.27/bin/shutdown.sh"
